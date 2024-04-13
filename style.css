@@ -1,0 +1,535 @@
+/* ------------------ Root Design -------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange:#fcc927;
+    /* --orange:#866002d7; */
+    --box-shadow:0px 0px 0px 6px rgba(225 225 225/40%)
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.btn{
+    padding: .8rem 2.5em;
+    text-transform: uppercase;
+    background: #fff;
+    color:var(--orange);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background:black;
+}
+.title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.title h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.title span{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 2;
+    color:var(--orange);
+}
+.line, .line4{
+    background-image: url();
+    width: 100%;
+    height: 100px;
+    margin-top: -3.6rem;
+}
+
+.line{
+    margin-bottom: 10rem;
+}
+
+.line2, .line4{
+    background-image: url();
+    width: 100%;
+    height: 100%;
+    margin-top: -3.5rem;
+}
+.line3{
+    margin-top: -3.5rem;
+    margin-bottom: 7rem;
+}
+
+/* For showing wrong messages */
+.message,
+.epmty{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 59%;
+    padding: .5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background: #0c0c0c;
+    color: #fff;
+}
+.message i{
+    cursor: pointer;
+}
+.epmty{
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+
+}
+
+input,button,textarea,select{
+    outline: none;
+    border: 1px solid #55555544;
+    background: transparent;
+    width: 100%;
+    padding:1rem 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+button{
+    cursor: pointer;
+}
+input[type=submit]{
+    cursor: pointer;
+}
+
+/* --------- Form Container------------ */
+
+.form-control{
+    /* background: rgb(247, 162, 3); */
+    background: url(img/banner2.jpg);
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 0;
+    position: relative;
+
+}
+.form-control h1{
+    text-transform: uppercase;
+    margin: 2rem 0;
+    font-size:2.3rem;
+    text-align: center;
+}
+.form-control form{
+    width: 60%;
+    margin: 1rem auto;
+    background: rgb(255 255 255/80%);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    position:relative;
+    border-radius: 5px;
+}
+
+.form-control form label{
+    text-transform: uppercase;
+    width: 100%;
+}
+.form-control form input{
+    width: 85%;
+}
+.form-control form input:focus{
+    border: 2px ridge rgb(6, 6, 6);
+ }
+.form-control form textarea{
+    width: 85%;
+    height: 200px;
+}
+.form-control form button{
+    width: 85%;
+    background: var(--orange);
+    border: none;
+}
+
+
+
+/* --------- banner ------------ */
+
+.banner{
+    /* background: var(--orange); */
+    background-image: url('img/banner5.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+}
+/* .banner::before{
+    position: absolute;
+    content: ' ';
+    bottom: -18%;
+    right: 0;
+    background-image: url(img/photo1.jpg); 
+    width: 316px;
+    height: 245px;
+    background-size: 216px;
+    background-repeat: no-repeat;
+} */
+
+.banner .detail{
+    position: absolute;
+    padding: 7rem 2rem;
+    z-index: 200;
+}
+.banner .detail h1{
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+.banner .detail p{
+    font-size: 18px;
+    line-height: 2;
+    padding: 2rem 10rem;
+
+}
+.banner .detail a{
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+}
+.banner .detail span{
+    color: #fff;
+}
+
+/* --------- header ------------ */
+.logo{
+     font-size: 2.5rem;
+     font-weight: 700;
+     font-family: serif;
+     margin-left: 2rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    transition: .3s;
+}
+header.scrolled{
+    background: #fff;
+    box-shadow: 0 5px 20px 0.1px rgba(0,0,0,0.1);
+    backdrop-filter: blur(20px);
+}
+header.scrolled a:hover{
+    color: var(--orange);
+}
+.flex{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+
+}
+.navbar a{
+    margin:0 1rem;
+    font-size: 1rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.navbar a:hover,
+header .icons i:hover{
+    color: #fff;
+    text-decoration: none;
+}
+header .icons {
+    display: flex;
+    font-size: 1.2rem;     
+}
+header .icons i{
+    margin-left: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+#menu-btn{
+    display: none;
+ }
+.header .user-box{
+    position: absolute;
+    top: 120%;
+    right: 0rem;
+    background: rgb(255 255 255 / 80%);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+    width: 20rem;
+    transform: scale(0);
+    transform-origin: top right;
+    line-height: 2;
+}
+.logout-btn{
+    background:#000;
+    color: #fff;
+    text-transform: uppercase;
+    width: 10rem;
+    border-radius: 4px;
+}
+.header .user-box.active{
+    transform: scale(1.0);
+    transition: .2s linear;
+}
+
+/* ----------------- admin Dashboard ---------------- */
+.dashboard{
+    background: var(--orange);
+    padding: 3rem;
+    margin-top: -3.4rem;
+    position: relative;
+}
+/* .dashboard::before{
+    position: absolute;
+    content: ' ';
+    top: -25%;
+    left: -10px;
+    background-image: url(img/photo1.jpg); 
+    width: 225px;
+    height: 220px;
+    background-size: 225px;
+    background-repeat: no-repeat;
+    z-index: 100;
+}  */
+.box-container{
+    padding: 2% 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 1rem;
+    /* outline: 5px solid #fff; */
+}
+.box-container .box{
+    background: #fff;
+    box-shadow: var(--orange);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    margin: 1rem;
+    outline: 5px solid #d6d1d1;
+
+}
+.dashboard h3{
+    text-align: center;
+    font-size: 2rem;
+}
+.dashboard p{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: .5rem 0;
+}
+/* ----------------- admin Dashboard ---------------- */
+.add-products{
+    margin-top:-3.5rem;
+    height: auto;
+    background: #f1ecec;
+    position: relative;
+}
+
+.show-products,
+.message-container,
+.order-container{
+    position: relative;
+    background: var(--orange);
+    margin-top: -3.5rem;
+}
+.show-products::before{
+    background-image: url('img/banner2.jpg');
+    top:-100px
+}
+.show-products .box-container{
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+.box-container .box{
+    line-height: 1.4;
+}
+.box-container .box img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.edit,
+.delete{
+    color: black;
+    background: var(--orange);
+    padding: .5rem 1.5rem;
+    text-transform: capitalize;
+    line-height: 2;
+ }
+
+.update-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    background: var(--orange);
+    z-index: 1100;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    display:none;
+ }
+.update-container form{
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+    width: 50%;
+    background: #fff;
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+.update-container form img{
+    margin:2.5rem auto;
+}
+.update-container .edit,
+.update-container .btn {
+    width: 40%;
+    cursor: pointer;
+}
+.update-container form img{
+    width: 60%;
+}
+
+.message-container .title{
+    text-transform:uppercase;
+    padding-top: 3rem;
+}
+.message-container .box p {
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+    color:hotpink;
+
+}
+.message-container .box span{
+    color: #555;
+}
+.message-container .box{
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+/* For-------------- Order ----------------- */
+.order-container h1{
+    margin-top: 2rem;
+}
+.order-container .box-container .box{
+    line-height: 2;
+}
+.order-container{
+    padding: 3% 7%;
+}
+.order-container .box-container{
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    justify-content: center;
+    align-items:flex-start;
+}
+.order-container .box{
+    text-align: left;
+    padding: 1rem 2rem;
+}
+.order-container .box p {
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+    color:hotpink;
+}
+.order-container .box span{
+    color: #555;
+}
+.order-container form{
+    text-align: center;
+}
+.order-container form select{
+    width: 100%;
+    margin: 1rem auto;
+    cursor: pointer;
+    padding: .5rem 0;
+    border-radius: 3px;
+
+}
+.order-container form input{
+    width: 100%;
+    margin: 1rem auto;
+    padding: .5rem 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.order-container form input:hover{
+    color: #fff;
+
+}
+ 
+.order-container .box .delete {
+    width: 100%;
+}
+
+
+
+/* ----------------- Media Screen ---------------- */
+ @media (max-width:991px){
+     
+    #menu-btn{
+        display: block;
+    }
+    .header .flex .navbar{
+        position: absolute;
+        top: 149%;
+        left: 0;
+        display: block;
+        right: 0;
+        border-top: 1px solid #000;
+        background: #fff;
+        transition: .3s ease;
+        clip-path:polygon(0 0, 100% 0,100% 0, 0 0); ;
+     }
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0,100% 100%, 0 100%);
+    }
+    .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+     .header .flex .navbar a:hover{
+        color: var(--orange);
+    }
+    .icons{
+        margin-right: 2rem;
+    }
+} 
+@media (max-width:850px){
+    .banner .detail h1{
+        font-size: 2.5rem;
+    }
+    .banner .detail p{
+        font-size:1.5rem;
+        padding: 1.5rem 3rem;
+    }
+
+
+}
+@media (max-width:620px){
+    .banner .detail h1{
+        font-size: 2.2rem;
+    }
+    .banner .detail p{
+        font-size:1.5rem;
+        padding: 1rem 2rem;
+    }
+
+
+}
+
